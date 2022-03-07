@@ -1,8 +1,4 @@
-﻿using Sweater_Weather_2.Services;
-using Sweater_Weather_2.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace Sweater_Weather_2
 {
@@ -12,8 +8,6 @@ namespace Sweater_Weather_2
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
