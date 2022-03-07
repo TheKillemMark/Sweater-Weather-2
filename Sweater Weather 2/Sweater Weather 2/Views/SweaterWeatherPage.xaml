@@ -6,7 +6,7 @@
              x:DataType="viewmodels:SweaterWeatherViewModel">
     
     <ContentPage.BindingContext>
-        <viewmodels:SweaterWeatherViewModel/>        
+        <viewmodels:SweaterWeatherViewModel/>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
