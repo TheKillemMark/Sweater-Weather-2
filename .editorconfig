@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Metadata file 'C:\Users\marki\OneDrive\Skewl\PP4\Sweater Weather 2\Sweater Weather 2\Sweater Weather 2\bin\Debug\netstandard2.0\ref\Sweater Weather 2.dll' could not be found
+dotnet_diagnostic.CS0006.severity = none

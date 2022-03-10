@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweater Weather 2.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweater Weather 2.iOS", "Sweater Weather 2\Sweater Weather 2.iOS\Sweater Weather 2.iOS.csproj", "{552B12CE-A92C-4E7F-BEA7-58B99EE0C761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sweater Weather 2", "Sweater Weather 2\Sweater Weather 2\Sweater Weather 2.csproj", "{FE28B40C-9CB7-4F71-A0AD-F7AB67EB15FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sweater Weather 2", "Sweater Weather 2\Sweater Weather 2\Sweater Weather 2.csproj", "{FE28B40C-9CB7-4F71-A0AD-F7AB67EB15FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{839A4E5B-46BD-4E01-890D-C9D9875F150E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

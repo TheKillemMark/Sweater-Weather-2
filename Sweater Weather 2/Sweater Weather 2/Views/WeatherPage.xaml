@@ -24,7 +24,7 @@
 
                         <Grid Grid.Row="0" BackgroundColor="#E9E9E5" >
                             <Label Grid.Row="0" Grid.Column="0" Text="{Binding timezone}" FontSize="20" FontAttributes="Bold" TextColor="#52524E"/>
-                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}" />
+                            <!--<Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"/>-->
                         </Grid>
 
                         <Grid Grid.Row="1" BackgroundColor="#d4d6c8" >
