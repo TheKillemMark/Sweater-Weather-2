@@ -1,5 +1,4 @@
 ﻿using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Sweater_Weather_2
 {
@@ -9,7 +8,8 @@ namespace Sweater_Weather_2
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+            AppShell appShell = new AppShell();
+            MainPage = appShell;
         }
 
         protected override void OnStart()

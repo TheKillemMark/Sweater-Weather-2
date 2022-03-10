@@ -1,9 +1,7 @@
 ﻿using Sweater_Weather_2.Models;
 using Sweater_Weather_2.Services;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sweater_Weather_2.ViewModels
@@ -16,25 +14,26 @@ namespace Sweater_Weather_2.ViewModels
             get
             {
                 if (_weatherList == null)
+                {
                     _weatherList = new ObservableCollection<OneCallAPI>();
+                }
+
                 return _weatherList;
             }
-            set
-            {
-                _weatherList = value;
-            }
+            set => _weatherList = value;
         }
 
         private async Task APIAsync()
         {
-            var weather = await WeatherAPI.GetOneCallAPIAsync(38.264790, -76.455032, "standard");
+            OneCallAPI weather = await WeatherAPI.GetOneCallAPIAsync(38.264790, -76.455032, "standard");
             //    var weather = await WeatherAPI.GetFiveDaysAsync("Lexington Park");
             WeatherList.Add(weather);
         }
 
         public WeatherViewModel()
         {
-            Task.Run(APIAsync);
+            Task task = Task.Run(APIAsync);
+            _ = task;
         }
     }
 }

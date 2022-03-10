@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Sweater_Weather_2.Models;
-using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sweater_Weather_2.Services
@@ -15,13 +12,13 @@ namespace Sweater_Weather_2.Services
         public static async Task<OneCallAPI> GetOneCallAPIAsync(double lat, double lon, string units)
         {
             OneCallAPI weather = new OneCallAPI();
-            string url = String.Format(BASE_URL, lat, lon, units, OPENWEATHERMAP_API_KEY);
+            string url = string.Format(BASE_URL, lat, lon, units, OPENWEATHERMAP_API_KEY);
             HttpClient httpClient = new HttpClient();
             var response = await httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
-                var posts = JsonConvert.DeserializeObject<OneCallAPI>(content);
+                string content = await response.Content.ReadAsStringAsync();
+                OneCallAPI posts = JsonConvert.DeserializeObject<OneCallAPI>(content);
                 weather = posts;
             }
             return weather;

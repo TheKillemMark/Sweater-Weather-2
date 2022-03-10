@@ -3,16 +3,16 @@ using Xamarin.Forms;
 
 namespace Sweater_Weather_2
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class AppShell : Shell
     {
         public AppShell()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            await Current.GoToAsync("//LoginPage");
         }
     }
 }
