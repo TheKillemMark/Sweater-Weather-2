@@ -5,16 +5,17 @@ using Android.OS;
 
 namespace Sweater_Weather_2.Droid
 {
-    [Activity(Label = "Sweater_Weather_2", Icon = "@drawable/Splash_logo", Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true)]//, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
+    [Activity(Label = "Sweater_Weather_2")]//Icon = "@drawable/Splash_logo", Theme = "@style/SplashTheme", MainLauncher = false, NoHistory = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        static readonly string TAG = "X:" + typeof(MainActivity).Name;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            this.StartActivity(typeof(MainActivity));
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(application: new App());
+            LoadApplication(new App());
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
