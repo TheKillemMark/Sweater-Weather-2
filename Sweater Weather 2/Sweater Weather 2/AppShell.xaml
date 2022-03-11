@@ -14,12 +14,12 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="Black" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -32,7 +32,7 @@
             https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -40,13 +40,13 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="Gray" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="White" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="Black" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -73,7 +73,22 @@
         </ResourceDictionary>
     </Shell.Resources>
     
-    <FlyoutItem Title="About" Icon="About_logo.png">
+    <FlyoutItem Title="About" Icon="About_logo.jpg">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Help" Icon="help_icon.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="FAQ" Icon="FAQ_icon.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Report Bug" Icon="bug_icon.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Contact Us" Icon="contact_icon.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Give Feedback" Icon="feedback_logo.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
 
