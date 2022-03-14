@@ -10,6 +10,8 @@ namespace Sweater_Weather_2
             InitializeComponent();
             AppShell appShell = new AppShell();
             MainPage = appShell;
+            //MainPage = new NavigationPage(new AppShell());
+            //MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

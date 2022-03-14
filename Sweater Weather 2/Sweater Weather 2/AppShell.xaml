@@ -2,35 +2,34 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:Sweater_Weather_2.Views"
-       Title="Sweater_Weather_2"
+       Title="Sweater Weather"
        x:Class="Sweater_Weather_2.AppShell">
 
-    <!--
-        The overall app visual hierarchy is defined here, along with navigation.
-    
-        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
-    -->
+    <!--<NavigationPage.TitleView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center"  Orientation="Horizontal">
+            <Label HorizontalOptions="Center" VerticalTextAlignment="Center" Text="Sweater Weather" FontSize="Large" TextColor="Orange" FontAttributes="Bold, Italic"/>
+
+        </StackLayout>
+    </NavigationPage.TitleView>-->
 
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="Black" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
-                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="Red" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
+            
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
-
-            <!--
-            Default Styles for all Flyout Items
-            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
-            -->
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />            
+            
+            
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Gray"></Setter>
             </Style>
@@ -54,16 +53,13 @@
                 </Setter>
             </Style>
 
-            <!--
-            Custom Style you can apply to any Flyout Item
-            -->
             <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}"  />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -77,19 +73,18 @@
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Help" Icon="help_icon.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+        <ShellContent Route="HelpPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
     <FlyoutItem Title="FAQ" Icon="FAQ_icon.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+        <ShellContent Route="FAQPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Report Bug" Icon="bug_icon.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+        <ShellContent Route="ReportPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Contact Us" Icon="contact_icon.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+        <ShellContent Route="ContactPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Give Feedback" Icon="feedback_logo.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
+        <ShellContent Route="FeedbackPage" ContentTemplate="{DataTemplate local:SweaterWeatherPage}" />
     </FlyoutItem>
-
 </Shell>
