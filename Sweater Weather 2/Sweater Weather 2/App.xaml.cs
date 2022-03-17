@@ -8,9 +8,9 @@ namespace Sweater_Weather_2
         public App()
         {
             InitializeComponent();
-            AppShell appShell = new AppShell();
-            MainPage = appShell;
-            //MainPage = new NavigationPage(new AppShell());
+            //AppShell appShell = new AppShell();
+            //MainPage = appShell;
+            MainPage = new NavigationPage(new TabbedPage1());
             //MainPage = new NavigationPage(new MainPage());
         }
 
