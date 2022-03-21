@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ob="clr-namespace:Sweater_Weather_2.ViewModels"
-             x:Class="Sweater_Weather_2.Views.WeatherPage">
+             x:Class="Sweater_Weather_2.Views.WeatherPage"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
     
     <ContentPage.BindingContext>
         <ob:WeatherViewModel/>
@@ -24,7 +25,7 @@
 
                         <Grid Grid.Row="0" BackgroundColor="#E9E9E5" >
                             <Label Grid.Row="0" Grid.Column="0" Text="{Binding timezone}" FontSize="20" FontAttributes="Bold" TextColor="#52524E"/>
-                            <!--<Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static sys:DateTime.Now.ToString}, StringFormat='{0:MMMM dd, yyyy}'}"/>-->
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"/>
                         </Grid>
 
                         <Grid Grid.Row="1" BackgroundColor="#d4d6c8" >

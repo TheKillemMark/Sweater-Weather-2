@@ -9,7 +9,12 @@ namespace Sweater_Weather_2.Models
             public int id { get; set; }
             public string main { get; set; }
             public string description { get; set; }
-            public string icon => string.Format("{0}{1}{2}", "https://openweathermap.org/img/wn/", icon, "@4x.png");
+            public string icon { get; set; }
+        }
+
+        public class Rain
+        {
+            public double _1h { get; set; }
         }
 
         public class Current
@@ -28,13 +33,9 @@ namespace Sweater_Weather_2.Models
             public double wind_speed { get; set; }
             public int wind_deg { get; set; }
             public List<Weather> weather { get; set; }
+            public Rain rain { get; set; }
         }
-
-        public class Minutely
-        {
-            public int dt { get; set; }
-            public int precipitation { get; set; }
-        }
+       
 
         public class Hourly
         {
@@ -49,8 +50,10 @@ namespace Sweater_Weather_2.Models
             public int visibility { get; set; }
             public double wind_speed { get; set; }
             public int wind_deg { get; set; }
+            public double wind_gust { get; set; }
             public List<Weather> weather { get; set; }
             public double pop { get; set; }
+            public Rain rain { get; set; }
         }
 
         public class Temp
@@ -76,6 +79,9 @@ namespace Sweater_Weather_2.Models
             public int dt { get; set; }
             public int sunrise { get; set; }
             public int sunset { get; set; }
+            public int moonrise { get; set; }
+            public int moonset { get; set; }
+            public double moon_phase { get; set; }
             public Temp temp { get; set; }
             public FeelsLike feels_like { get; set; }
             public int pressure { get; set; }
@@ -83,6 +89,7 @@ namespace Sweater_Weather_2.Models
             public double dew_point { get; set; }
             public double wind_speed { get; set; }
             public int wind_deg { get; set; }
+            public double wind_gust { get; set; }
             public List<Weather> weather { get; set; }
             public int clouds { get; set; }
             public double pop { get; set; }
@@ -97,7 +104,6 @@ namespace Sweater_Weather_2.Models
             public string timezone { get; set; }
             public int timezone_offset { get; set; }
             public Current current { get; set; }
-            public List<Minutely> minutely { get; set; }
             public List<Hourly> hourly { get; set; }
             public List<Daily> daily { get; set; }
         }

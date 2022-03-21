@@ -20,20 +20,22 @@ namespace Sweater_Weather_2.ViewModels
 
                 return _weatherList;
             }
-            set => _weatherList = value;
+            set
+            {
+                _weatherList = value;
+            }
         }
 
         private async Task APIAsync()
         {
-            OneCallAPI weather = await WeatherAPI.GetOneCallAPIAsync(38.264790, -76.455032, "standard");
-            //    var weather = await WeatherAPI.GetFiveDaysAsync("Lexington Park");
+            var weather = await WeatherAPI.GetOneCallAPIAsync(38.264790, -76.455032, "imperial");
+            //var weather = await WeatherAPI.GetFiveDaysAsync("Lexington Park");
             WeatherList.Add(weather);
         }
 
         public WeatherViewModel()
         {
-            Task task = Task.Run(APIAsync);
-            _ = task;
+           Task.Run(APIAsync);
         }
     }
 }

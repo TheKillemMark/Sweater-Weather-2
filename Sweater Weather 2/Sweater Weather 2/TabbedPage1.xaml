@@ -9,11 +9,11 @@
             SelectedTabColor="White"
             UnselectedTabColor="Gray"
             Title="Sweater Weather">
-    
-  <!--Pages can be added as references or inline-->
+
+    <!--Pages can be added as references or inline-->
     <ContentPage Title="Home">
         <Button Text ="Navigate" Clicked="Button_Clicked"/>
     </ContentPage>
     <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <ContentPage Title="Tab 3" />
 </TabbedPage>

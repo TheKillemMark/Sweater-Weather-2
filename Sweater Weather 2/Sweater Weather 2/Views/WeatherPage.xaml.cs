@@ -10,7 +10,7 @@ namespace Sweater_Weather_2.Views
         public WeatherPage()
         {
             InitializeComponent();
-            BindingContext = new WeatherViewModel();
+            this.BindingContext = new WeatherViewModel();
         }
     }
 }
