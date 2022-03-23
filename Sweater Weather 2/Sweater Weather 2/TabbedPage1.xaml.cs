@@ -19,7 +19,7 @@ namespace Sweater_Weather_2
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AppShell());
+            await Navigation.PushAsync(new NavigationPage());
         }
     }
 }

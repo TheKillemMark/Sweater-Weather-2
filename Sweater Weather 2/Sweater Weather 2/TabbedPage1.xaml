@@ -5,15 +5,34 @@
             xmlns:local="clr-namespace:Sweater_Weather_2"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            BarBackgroundColor="Black"
-            SelectedTabColor="White"
+            BarBackgroundColor="Orange"
+            SelectedTabColor="Black"
             UnselectedTabColor="Gray"
             Title="Sweater Weather">
+    <!--NavigationPage.HasNavigationBar="False"-->
 
     <!--Pages can be added as references or inline-->
-    <ContentPage Title="Home">
-        <Button Text ="Navigate" Clicked="Button_Clicked"/>
+    <ContentPage Title="HOME">
+        <Button Text ="Navigate" Clicked="Button_Clicked" TextColor="Black"/>
     </ContentPage>
-    <ContentPage Title="Tab 2" />
-    <ContentPage Title="Tab 3" />
+    <ContentPage Title="WEATHER"/>
+    <ContentPage Title="ALARMS"/>
+    <ContentPage Title="SETTINGS">
+        <StackLayout Padding="100">            
+            <Button Text="About" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Button Text="Help" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Button Text="FAQ" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Button Text="Report Bug" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Button Text="Contact Us" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Button Text="Give Feedback" Clicked ="Button_Clicked" TextColor="Black" BackgroundColor="Orange"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>                
+            </Grid>
+        </StackLayout>
+    </ContentPage>
 </TabbedPage>

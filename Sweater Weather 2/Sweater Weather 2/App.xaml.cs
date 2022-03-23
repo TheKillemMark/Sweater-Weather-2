@@ -10,12 +10,14 @@ namespace Sweater_Weather_2
         public App()
         {
             InitializeComponent();
+            Sharpnado.Tabs.Initializer.Initialize(false, false);
+            Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
             //AppShell appShell = new AppShell();
             //MainPage = appShell;
-            //MainPage = new NavigationPage(new TabbedPage1());
+            MainPage = new NavigationPage(new TabbedPage1());
             //MainPage = new NavigationPage(new MainPage());
-            WeatherPage root = new WeatherPage();
-            MainPage = new NavigationPage(root);
+            //WeatherPage root = new WeatherPage();
+            //MainPage = new NavigationPage(root);
         }
 
         protected override void OnStart()

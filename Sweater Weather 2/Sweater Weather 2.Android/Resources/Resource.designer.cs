@@ -22253,6 +22253,9 @@ namespace Sweater_Weather_2.Droid
 			// aapt resource value: 0x7F070098
 			public const int tooltip_frame_light = 2131165336;
 			
+			// aapt resource value: 0x7F070099
+			public const int weather = 2131165337;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -24387,6 +24390,9 @@ namespace Sweater_Weather_2.Droid
 			
 			// aapt resource value: 0x7F0C0003
 			public const int splash_screen = 2131492867;
+			
+			// aapt resource value: 0x7F0C0004
+			public const int weather = 2131492868;
 			
 			static Mipmap()
 			{

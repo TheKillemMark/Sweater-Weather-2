@@ -10,6 +10,8 @@ namespace Sweater_Weather_2
             InitializeComponent();
         }
 
+        
+
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             await Current.GoToAsync("//LoginPage");
